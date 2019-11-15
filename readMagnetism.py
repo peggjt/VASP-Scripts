@@ -2,7 +2,7 @@
 The script extracts the final magnetic moments from the OUTCAR file
 and prints them to a file named MagneticData.
 
-The magnetic moments share the same order as the ions.
+The magnetic moments share the same order as the POSCAR or CONTCAR ions.
 To use this script:
 
     python readMagnetism.py
@@ -11,6 +11,8 @@ The OUTCAR file must be present in the same dictionary.
 
 The respective columns in the MagneticData file give 
 the magnetic moments in the x, y, and z dimensions.
+The final column is the total magnetic moment calculated 
+by pythagorean theorem.
 
 Author: James T. Pegg
 
