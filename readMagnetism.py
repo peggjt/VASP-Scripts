@@ -1,3 +1,21 @@
+'''
+The script extracts the final magnetic moments from the OUTCAR file
+and prints them to a file named MagneticData.
+
+The magnetic moments share the same order as the ions.
+To use this script:
+
+    python readMagnetism.py
+
+The OUTCAR file must be present in the same dictionary.
+
+The respective columns in the MagneticData file give 
+the magnetic moments in the x, y, and z dimensions.
+
+Author: James T. Pegg
+
+'''
+
 import os
 
 xData = []
@@ -35,5 +53,8 @@ with open('OUTCAR', 'r+') as f:
                                 zData.append(line.split()[5])
 
 with open('MagneticData', 'a+') as f:
+        f.write('{}\n'.format('Magnetic Data'))
+        f.write('{}\n'.format('%s %15s %15s'% ('x-axis', 'y-axis', 'z-axis')))
+        f.write('{}\n'.format('%s %15s %15s'% ('----------', '----------', '----------')))
         for i in range(0, len(xData)):
                 f.write('{}\n'.format('%s %15s %15s'% (xData[i], yData[i], zData[i])))
