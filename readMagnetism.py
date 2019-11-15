@@ -17,6 +17,7 @@ Author: James T. Pegg
 '''
 
 import os
+from math import sqrt
 
 xData = []
 yData = []
@@ -54,7 +55,11 @@ with open('OUTCAR', 'r+') as f:
 
 with open('MagneticData', 'a+') as f:
         f.write('{}\n'.format('Magnetic Data'))
-        f.write('{}\n'.format('%s %15s %15s'% ('x-axis', 'y-axis', 'z-axis')))
-        f.write('{}\n'.format('%s %15s %15s'% ('----------', '----------', '----------')))
+        f.write('{}\n'.format('%s %15s %15s %15s'% ('x-axis', 'y-axis', 'z-axis', 'Total')))
+        f.write('{}\n'.format('%s %15s %15s %15s'% ('----------', '----------', '----------', '----------')))
         for i in range(0, len(xData)):
-                f.write('{}\n'.format('%s %15s %15s'% (xData[i], yData[i], zData[i])))
+                total = round(sqrt(float(xData[i])**2 + float(yData[i])**2 + float(zData[i])**2), 3)
+                f.write('{}\n'.format('%s %15s %15s %15s'% (xData[i], 
+                                                            yData[i], 
+                                                            zData[i], 
+                                                            total)))
