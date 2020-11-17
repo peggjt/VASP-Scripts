@@ -1,0 +1,48 @@
+# Initial Parameters
+PREC = Normal
+NCORE = 8
+LORBIT = 11
+LREAL = Auto
+LASPH = .TRUE.
+NBANDS = 128
+
+# Calculation
+ISMEAR = 0
+SIGMA = 0.2
+LSORBIT = .TRUE.
+
+# Magnetic Moment
+MAGMOM = 1 1 1   1 -1 -1   -1 -1 1   -1 1 -1   0 0 0   0 0 0   0 0 0   0 0 0   0 0 0   0 0 0   0 0 0   0 0 0
+
+# Electronic Relaxation
+ALGO = Normal
+ENCUT = 575
+NELM = 60
+EDIFF = 1E-07
+
+# Density Functional Theory
+LMAXMIX = 6
+GGA = PS
+
+# Hubbard Parameters
+LDAU = .TRUE.
+LDAUTYPE = 1
+LDAUL = 3 -1
+LDAUU = 4.00 0.00
+LDAUJ = 0.00 0.00
+
+# Density of States
+NEDOS = 5000
+
+# Ionic Relaxation
+IBRION = 2
+NSW = 200
+EDIFFG = -1E-02
+ISIF = 3
+POTIM = 0.002
+
+# Output
+LWAVE = .FALSE.
+LCHARG = .FALSE.
+ICORELEVEL = 1
+LVHAR = .TRUE.
