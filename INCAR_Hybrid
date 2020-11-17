@@ -1,0 +1,43 @@
+# Initial Parameters
+PREC = Normal
+NCORE = 8
+LORBIT = 11
+LREAL = .FALSE.
+LASPH = .TRUE.
+NBANDS = 192
+
+# Calculation
+ISMEAR = 0
+SIGMA = 0.2
+LSORBIT = .TRUE.
+
+# Magnetic Moment
+MAGMOM = 1 1 1   1 -1 -1   -1 -1 1   -1 1 -1   0 0 0   0 0 0   0 0 0   0 0 0   0 0 0   0 0 0   0 0 0   0 0 0
+
+# Electronic Relaxation
+ENCUT = 575
+NELM = 60
+EDIFF = 1E-06
+
+# Hybrid Density Functional Theory
+LHFCALC = .TRUE.
+PRECFOCK = FAST
+ALGO = All
+TIME = 0.30
+HFLMAX = 6
+AEXX = 0.25
+HFSCREEN = 0.207
+
+# Density of States
+NEDOS = 3000
+
+# Ionic Relaxation
+IBRION = 2
+NSW = 150
+EDIFFG = -1E-02
+ISIF = 3
+POTIM = 0.002
+
+# Output
+LWAVE = .TRUE.
+LCHARG = .FALSE.
